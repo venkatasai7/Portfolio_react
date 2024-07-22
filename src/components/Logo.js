@@ -1,13 +1,14 @@
 
 import React, { useEffect, useState } from 'react'
 import gsap from 'gsap';
-import { ScrollTrigger } from 'gsap/ScrollTrigger';
+import { ScrollTrigger } from 'gsap/dist/ScrollTrigger';
 
 import "../Styles/Logo.css"
 
-gsap.registerPlugin(ScrollTrigger);
+
 
 const Logo = () => {
+  gsap.registerPlugin(ScrollTrigger);
     const [logo, setLogo] = useState("Hola! I am Venkata Sai Kuniganti.");
 
     useEffect(() => {
