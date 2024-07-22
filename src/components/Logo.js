@@ -1,7 +1,7 @@
 
-import React, { useLayoutEffect, useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import gsap from 'gsap';
-import { ScrollTrigger } from 'gsap/dist/ScrollTrigger';
+import { ScrollTrigger } from 'gsap/ScrollTrigger';
 
 import "../Styles/Logo.css"
 
@@ -11,7 +11,7 @@ const Logo = () => {
   gsap.registerPlugin(ScrollTrigger);
     const [logo, setLogo] = useState("Hola! I am Venkata Sai Kuniganti.");
 
-    useLayoutEffect(() => {
+    useEffect(() => {
   
       const tl = gsap.timeline({
         scrollTrigger: {
