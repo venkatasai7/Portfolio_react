@@ -31,7 +31,7 @@ const Home = () => {
       <AboutMe />
 
       <button onClick={scrollToTop} style={{ opacity :'0.5',position: 'fixed', bottom: '20px', right: '20px', zIndex: '99' }}>
-        <img src='../images/image.png' style={{ opacity :'1' ,width:"50px",height:"50px" }}/>
+        <img src='../images/image.png' style={{ opacity :'1' ,width:"50px",height:"50px" }} alt=""/>
       </button>
     </div>
   );

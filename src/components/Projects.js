@@ -74,12 +74,12 @@ const Scroller = ({ direction = 'right', speed = 'fast' }) => {
 
   return (
     <div style={{ paddingTop: '2%' }}>
-     <a style={{ float: 'right' }} href="#">view projects</a>
+     <a style={{ float: 'right' }} href="/">view projects</a>
      <div className="scroller" data-direction={direction} data-speed={speed}>
       <div className="scroller__inner">
         {cards.map((card) => (
           <div key={card.id} className="card" style={{ width: '35rem',height:'30rem' , boxShadow: '0 4px 8px rgba(0, 0, 0, 0.3)'}}>
-            <img src={card.imageUrl} className="card-img-top" alt="Card image cap" />
+            <img src={card.imageUrl} className="card-img-top" alt="" />
             <div className="card-body">
               {/*<h5 className="card-title">{card.title}</h5>*/}
               <a href="/" className="btn btn-primary">{card.buttonText}</a>
