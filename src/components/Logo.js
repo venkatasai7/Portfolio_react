@@ -9,6 +9,7 @@ const Logo = () => {
 
   useLayoutEffect(() => {
     // Ensure `.aboutcontent` exists and is correctly referenced
+    console.log({ScrollTrigger})
     const triggerElement = document.querySelector(".aboutcontent");
     if (!triggerElement) {
       console.warn("Trigger element '.aboutcontent' not found.");
