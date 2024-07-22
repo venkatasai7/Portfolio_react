@@ -1,15 +1,14 @@
 import React, { useEffect, useState } from 'react';
 import "../Styles/Logo.css";
-import gsap from "gsap";
-import ScrollTrigger from 'gsap/ScrollTrigger';
-
-gsap.registerPlugin(ScrollTrigger);
 
 const Logo = () => {
     const [logo, setLogo] = useState("Hola! I am Venkata Sai Kuniganti.");
 
     useEffect(() => {
-        const tl = gsap.timeline({
+        console.log('GSAP:', window.gsap);
+        console.log('ScrollTrigger:', window.gsap?.ScrollTrigger);
+
+        const tl = window.gsap.timeline({
             scrollTrigger: {
                 trigger: ".aboutcontent",
                 start: "top bottom",
