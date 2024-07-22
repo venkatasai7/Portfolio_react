@@ -43,6 +43,7 @@ const Logo = () => {
           yPercent: -5,
         }
       )
+      console.log("ScrollTrigger", ScrollTrigger);
       return () => {
         tl.scrollTrigger.kill();
       }
