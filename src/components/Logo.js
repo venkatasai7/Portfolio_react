@@ -5,8 +5,8 @@ const Logo = () => {
     const [logo, setLogo] = useState("Hola! I am Venkata Sai Kuniganti.");
 
     useEffect(() => {
-        console.log('GSAP:', window.gsap);
-        console.log('ScrollTrigger:', window.gsap?.ScrollTrigger);
+        console.warn('GSAP:', window.gsap);
+        console.warn('ScrollTrigger:', window.gsap?.ScrollTrigger);
 
         const tl = window.gsap.timeline({
             scrollTrigger: {
