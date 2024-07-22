@@ -13,7 +13,13 @@ const Logo = () => {
     else 
     console.warn("Trigger element '.aboutcontent'  found.");
   useLayoutEffect(() => {
-
+    const triggerElement = document.querySelector(".aboutcontent");
+    if (!triggerElement) {
+      console.warn("Trigger element '.aboutcontent' not found.");
+      return;
+    }
+    else 
+    console.warn("Trigger element '.aboutcontent'  found.");
     const tl = gsap.timeline({
       scrollTrigger: {
         trigger: triggerElement,
