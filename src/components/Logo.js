@@ -1,6 +1,6 @@
 import React, { useLayoutEffect, useState } from 'react';
 import gsap from 'gsap';
-import { ScrollTrigger } from 'gsap/ScrollTrigger';
+import { ScrollTrigger } from 'gsap/dist/ScrollTrigger';
 import '../Styles/Logo.css';
 import AboutMe from './AboutMe';
 
@@ -15,7 +15,7 @@ const Logo = () => {
     console.warn({'scrolltrigger':ScrollTrigger})
 
     const tl = gsap.timeline({
-      scrollTrigger: {
+      ScrollTrigger: {
         trigger: "aboutcontent",
         start: "top bottom",
         end: "top center",
