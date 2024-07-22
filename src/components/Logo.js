@@ -3,22 +3,20 @@ import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import '../Styles/Logo.css';
 import AboutMe from './AboutMe';
+
+gsap.registerPlugin(ScrollTrigger);
+
 const Logo = () => {
   gsap.registerPlugin(ScrollTrigger);
   const [logo, setLogo] = useState("Hola! I am Venkata Sai Kuniganti.");
 
   useLayoutEffect(() => {
+    gsap.registerPlugin(ScrollTrigger);
     console.warn({'scrolltrigger':ScrollTrigger})
-    const triggerElement = document.querySelector(".aboutcontent");
-    if (!triggerElement) {
-      console.warn("Trigger element '.aboutcontent' not found.");
-      return;
-    }
-    else 
-    console.warn("Trigger element '.aboutcontent'  found.");
+
     const tl = gsap.timeline({
       scrollTrigger: {
-        trigger: triggerElement,
+        trigger: "aboutcontent",
         start: "top bottom",
         end: "top center",
         scrub: true,
@@ -39,7 +37,7 @@ const Logo = () => {
       tl.scrollTrigger.kill();
     };
   },);
-
+  gsap.registerPlugin(ScrollTrigger);
   return (
     <div>
       <div className="nav">
