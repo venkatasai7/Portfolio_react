@@ -2,7 +2,7 @@ import React, { useLayoutEffect, useState } from 'react';
 import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import '../Styles/Logo.css';
-
+import AboutMe from './AboutMe';
 const Logo = () => {
   gsap.registerPlugin(ScrollTrigger);
   const [logo, setLogo] = useState("Hola! I am Venkata Sai Kuniganti.");
@@ -62,6 +62,8 @@ const Logo = () => {
       <div className="logocontainer">
         {/* Add any additional content here if needed */}
       </div>
+
+      <AboutMe/>
     </div>
   );
 }
