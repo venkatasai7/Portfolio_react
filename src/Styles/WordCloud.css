@@ -1,0 +1,16 @@
+.word-cloud-container {
+  position: relative;
+  width: 60vw; /* Adjust width as needed */
+  height: 70vh; /* Adjust height as needed */
+  margin: 0 auto; /* Center the word cloud */
+  padding :1%;
+}
+
+.word-cloud-item {
+  cursor: pointer; /* Add pointer cursor on hover */
+  transition: all 0.5s ease-in-out; /* Smooth transition for hover effects */
+}
+
+.word-cloud-item:hover {
+  transform: scale(1.5); /* Scale up on hover */
+}
