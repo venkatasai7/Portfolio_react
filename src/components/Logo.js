@@ -11,8 +11,6 @@ const Logo = () => {
   const [logo, setLogo] = useState("Hola! I am Venkata Sai Kuniganti.");
 
   useLayoutEffect(() => {
-    gsap.registerPlugin(ScrollTrigger);
-    console.warn({'scrolltrigger':ScrollTrigger})
 
     const tl = gsap.timeline({
       ScrollTrigger: {
@@ -34,10 +32,10 @@ const Logo = () => {
 
     // Cleanup scroll trigger
     return () => {
-      tl.scrollTrigger.kill();
+      tl.ScrollTrigger.kill();
     };
   },);
-  gsap.registerPlugin(ScrollTrigger);
+
   return (
     <div>
       <div className="nav">
