@@ -8,7 +8,7 @@ const Logo = () => {
   const [logo, setLogo] = useState("Hola! I am Venkata Sai Kuniganti.");
 
   useLayoutEffect(() => {
-    console.warn({ScrollTrigger})
+    console.warn({'scrolltrigger':ScrollTrigger})
     const triggerElement = document.querySelector(".aboutcontent");
     if (!triggerElement) {
       console.warn("Trigger element '.aboutcontent' not found.");
