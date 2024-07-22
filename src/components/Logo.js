@@ -6,13 +6,9 @@ import AboutMe from './AboutMe';
 const Logo = () => {
   gsap.registerPlugin(ScrollTrigger);
   const [logo, setLogo] = useState("Hola! I am Venkata Sai Kuniganti.");
-  const triggerElement = document.querySelector(".aboutcontent");
-    if (!triggerElement) {
-      console.warn("Trigger element '.aboutcontent' not found.");
-    }
-    else 
-    console.warn("Trigger element '.aboutcontent'  found.");
+
   useLayoutEffect(() => {
+    console.warn({ScrollTrigger})
     const triggerElement = document.querySelector(".aboutcontent");
     if (!triggerElement) {
       console.warn("Trigger element '.aboutcontent' not found.");
