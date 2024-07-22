@@ -1,5 +1,5 @@
 
-import React, { useEffect, useState } from 'react'
+import React, { useLayoutEffect, useState } from 'react'
 import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/dist/ScrollTrigger';
 
@@ -11,7 +11,7 @@ const Logo = () => {
   gsap.registerPlugin(ScrollTrigger);
     const [logo, setLogo] = useState("Hola! I am Venkata Sai Kuniganti.");
 
-    useEffect(() => {
+    useLayoutEffect(() => {
   
       const tl = gsap.timeline({
         scrollTrigger: {
@@ -42,7 +42,10 @@ const Logo = () => {
           scale: 1,
           yPercent: -5,
         }
-      );
+      )
+      return () => {
+        tl.scrollTrigger.kill();
+      }
     }, []);
   
     return (
