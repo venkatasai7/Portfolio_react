@@ -13,8 +13,8 @@ const Logo = () => {
   useLayoutEffect(() => {
 
     const tl = gsap.timeline({
-      ScrollTrigger: {
-        trigger: "aboutcontent",
+      scrollTrigger: {
+        trigger: ".aboutcontent",
         start: "top bottom",
         end: "top center",
         scrub: true,
@@ -32,7 +32,7 @@ const Logo = () => {
 
     // Cleanup scroll trigger
     return () => {
-      tl.ScrollTrigger.kill();
+      tl.scrollTrigger.kill();
     };
   },);
 
