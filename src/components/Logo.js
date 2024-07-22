@@ -10,8 +10,9 @@ const Logo = () => {
     const [logo, setLogo] = useState("Hola! I am Venkata Sai Kuniganti.");
 
     useEffect(() => {
-
-gsap.registerPlugin(ScrollTrigger);
+      if (typeof window !== "undefined") {
+        gsap.registerPlugin(ScrollTrigger);
+      }
       const tl = gsap.timeline({
         scrollTrigger: {
           trigger: ".aboutcontent",
