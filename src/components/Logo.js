@@ -6,10 +6,10 @@ import '../Styles/Logo.css';
 const Logo = () => {
   gsap.registerPlugin(ScrollTrigger);
   const [logo, setLogo] = useState("Hola! I am Venkata Sai Kuniganti.");
-
+  console.log({'scrolltrigger':"1"})
   useLayoutEffect(() => {
     // Ensure `.aboutcontent` exists and is correctly referenced
-    console.log({ScrollTrigger})
+    console.log({'scrolltrigger':"2"})
     const triggerElement = document.querySelector(".aboutcontent");
     if (!triggerElement) {
       console.warn("Trigger element '.aboutcontent' not found.");
@@ -34,11 +34,13 @@ const Logo = () => {
       { y: 0, scale: 1, yPercent: -5 }
     );
 
+    console.log({'scrolltrigger':"3"})
     // Cleanup scroll trigger
     return () => {
+      console.log({'scrolltrigger':"4"})
       tl.scrollTrigger.kill();
     };
-  }, []);
+  },);
 
   return (
     <div>
